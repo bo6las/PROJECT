@@ -1,0 +1,39 @@
+body{
+    margin:30px;
+    background-color:whitesmoke;
+}
+h1{
+    
+    font-family:sans-serif;
+    text-align:justify;
+}
+p{
+    font-family:sans-serif;
+}
+button{
+    margin:10px;
+    padding: 10px;
+    color:rgba(0, 0, 0, 0.486);
+    border:  1px solid whitesmoke;
+}
+button:hover {
+    background-color: whitesmoke;
+    transform: translateY(-2px);
+}
+button:active {
+    transform: translateY(1px);
+}
+.back{
+    color: rgb(0, 0, 0);
+    padding: 10px;
+    border:  1px solid whitesmoke;
+}
+input{
+    width: 250px;
+    padding:5px;
+    margin:10px;
+    background:#D9D9D9;
+    color:black;
+    border:  1px solid whitesmoke;
+
+}
