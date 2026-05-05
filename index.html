@@ -1,1 +1,63 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <title>Водомер</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="card">
+    <h1>Водомер</h1>
+    <div class="subhead">
+      <span class="goal-badge" id="goalDisplay">Цель: 2500 мл</span>
+    </div>
 
+    <!-- Визуальный стакан -->
+    <div class="glass-container">
+      <div class="glass">
+        <div class="water-fill" id="waterFill"></div>
+        <div class="glass-glare"></div>
+        <div class="water-stats">
+          <div class="current-ml" id="currentMlDisplay">0 <small>мл</small></div>
+          <div class="percent-indicator" id="percentDisplay">0%</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Основные кнопки + слайдер -->
+    <div class="controls">
+      <div class="add-buttons">
+        <button class="btn water" id="add200Btn" title="Добавить 200 мл">+200</button>
+        <button class="btn water" id="add300Btn" title="Добавить 300 мл">+300</button>
+        <button class="btn reset" id="resetBtn" title="Сбросить счетчик">Сброс</button>
+      </div>
+
+      <div class="slider-block">
+        <div class="slider-label">
+          <span>Точная доливка</span>
+          <span id="sliderValueLabel">250 мл</span>
+        </div>
+        <input type="range" id="waterSlider" min="0" max="1000" value="250" step="10">
+        <div style="display: flex; justify-content: flex-end; margin-top: 10px;">
+          <button class="btn water" id="addSliderBtn" style="padding: 10px 24px; min-width: unset; font-size: 1rem;">+ Добавить</button>
+        </div>
+      </div>
+
+      <!-- Установка цели -->
+      <div class="goal-settings">
+        <div class="goal-input">
+          <input type="number" id="goalInput" min="500" max="8000" step="50" value="2500">
+          <span>мл</span>
+        </div>
+        <button class="apply-goal" id="applyGoalBtn">Задать цель</button>
+      </div>
+      <div class="progress-text" id="progressMessage">
+        Выпито 0 из 2500 мл
+      </div>
+    </div>
+  </div>
+
+  <script src="script.json"></script>
+</body>
+</html>
